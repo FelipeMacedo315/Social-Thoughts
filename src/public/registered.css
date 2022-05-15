@@ -10,7 +10,6 @@
   padding-top: 2%;
   align-items: center;
   gap: 40px;
-
 }
 .field {
   display: flex;
@@ -18,7 +17,6 @@
   width: 100%;
   margin-left: 2%;
   gap: 10px;
-
 }
 .field input {
   border-top: none;
@@ -30,4 +28,25 @@
   width: 60%;
   background-color: black;
   font-size: 0.8em;
+}
+button {
+  padding: 20px;
+  font-size: 1em;
+  background-color: black;
+  color:white;
+  border: solid orange;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+button:hover{
+  color: black;
+  background-color: orange;
+}
+h1{
+  font-size: 1em;
+  color: red;
+  text-align: center;
+ 
 }

@@ -1,7 +1,13 @@
 const express = require("express");
-const registeredGet = require("../controllers/regiteredGet");
+const {registeredGet,registeredPost} = require('../controllers/registered')
 const registeredRoutes = express.Router();
 
-registeredRoutes.get("/registered", registeredGet);
+registeredRoutes.use(express.urlencoded({ extended: true }));
+
+
+
+registeredRoutes.get("/registered",registeredGet );
+
+registeredRoutes.post("/registeredPost", registeredPost);
 
 module.exports = registeredRoutes;

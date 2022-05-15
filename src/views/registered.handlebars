@@ -1,18 +1,20 @@
- <link rel="stylesheet" href="/registered.css">
+<link rel="stylesheet" href="/registered.css" />
+  <h1>{{{msg}}} </h1>
 <div class="registered-container">
-  <form class="registered-form" action="">
+  <form class="registered-form" action="/registeredPost" method="post">
     <div class="field">
       <label for="name">Nome</label>
-      <input placeholder="Nome completo" type="text">
+      <input name="nome" placeholder="Nome completo" type="text" />
     </div>
     <div class="field">
       <label for="email">Email</label>
-      <input placeholder="Email" type="email">
+      <input name="email" placeholder="Email" type="email" />
     </div>
     <div class="field">
       <label for="password">Password</label>
-      <input placeholder="Crie uma senha" type="password">
+      <input name="password" placeholder="Crie uma senha" type="password" />
     </div>
-  <button>Registered</button>
+    <button>Registered</button>
   </form>
+
 </div>

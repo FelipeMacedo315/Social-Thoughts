@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="/login.css" />
+  <h1 id="login-error">{{{msgError}}} </h1>
 <div>
-  <form action="">
+  <form action="/LoginPost" method="post">
     <h1>Login</h1>
-    <input placeholder="Email" type="email"  />
-    <input placeholder="Passoword" type="password"  />
-   <button type="submit">Login</button>
+    <input name="email" placeholder="Email" type="email" />
+    <input name="password" placeholder="Password" type="password" />
+    <button type="submit">Login</button>
   </form>
 </div>

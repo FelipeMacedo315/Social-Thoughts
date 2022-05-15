@@ -27,3 +27,8 @@ div form button{
   background-color: green;
   border-radius: 10px;
 }
+#login-error{
+  font-size: 1em;
+  color: red;
+  text-align: center;
+}
