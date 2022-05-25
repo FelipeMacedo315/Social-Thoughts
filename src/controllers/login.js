@@ -1,7 +1,8 @@
 const tableUsers = require("../models/users");
 
 function loginGet(req, res) {
-  res.render("login");
+  req.session.userId = false
+  res.render("login",{sessionId:req.session.userId});
 }
 
 async function loginPost(req, res) {
@@ -14,10 +15,12 @@ async function loginPost(req, res) {
   });
 
   if (checkedUser === null) {
-    res.render('login',{msgError:'Email ou senha incorretos'})
+    res.render("login", {msgError: "Email ou senha incorretos"});
   } else {
-    res.render('thoughts')
+    req.session.userId = checkedUser.id
+    console.log(checkedUser.id)
+    req.session.save(() => res.redirect("/thoughts"));
   }
-
 }
+
 module.exports = {loginGet, loginPost};

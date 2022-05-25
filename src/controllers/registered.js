@@ -10,8 +10,11 @@ async function registeredPost(req, res) {
       nome: nome,
       email: email,
       password: password,
-    }).then;
-    res.render("thoughts");
+    });
+    req.session.userId = userCreate.id;
+    req.session.save(() => {
+      res.render("thoughts", {sessionId: req.session.userId});
+    });
   }
 }
 

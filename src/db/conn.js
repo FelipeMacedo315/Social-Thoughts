@@ -5,4 +5,5 @@ const conn = new Sequelize("toughts", "root", "", {
   logging: console.log("Conection is work"),
 });
 
+
 module.exports = conn;

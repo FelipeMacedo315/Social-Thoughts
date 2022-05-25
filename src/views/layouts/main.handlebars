@@ -9,12 +9,20 @@
   <body>
     <header>
       <ul>
-        <li><a href="/thoughts">Pensamentos</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/registered">Registrar</a></li>
+
+        {{#if sessionId}}
+          <li><a href="/dashboard/{{sessionId}}">Dashboard</a></li>
+          <li><a href="/login">Logout </a></li>
+
+        {{else}}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/registered">Registrar</a></li>
+        {{/if}}
+
+       
       </ul>
     </header>
-        {{{body}}}
+    {{{body}}}
     <footer>
       <p>Projeto feito durante o curso de <span>NodeJs</span>.</p>
     </footer>
