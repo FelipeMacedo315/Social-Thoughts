@@ -1,20 +1,23 @@
 <link rel="stylesheet" href="/dashboard.css" />
 <div id="all-thoughts">
   <div class="container-thoughts">
-    {{#each usersData}}
-      <div class="card-thoughts">
-        <p class="users-thoughts">{{this.thought}}</p>
-        <form action="/updateThought/{{this.idThought}}" method="get">
-          <input class="btn-update" value="Update" type="submit" />
-        </form>
-        <form action="/deleteThought/{{this.idThought}}" method="post">
-          <input class="btn-delete" value="Delete" type="submit" />
-        </form>
-     
-      </div>
-    {{/each}}
+    {{#if usersData}}
+      {{#each usersData}}
+        <div class="card-thoughts">
+          <p class="users-thoughts">{{this.thought}}</p>
+          <form action="/updateThought/{{this.idThought}}" method="get">
+            <input class="btn-update" value="Update" type="submit" />
+          </form>
+          <form action="/deleteThought/{{this.idThought}}" method="post">
+            <input class="btn-delete" value="Delete" type="submit" />
+          </form>
 
-  
+        </div>
+      {{/each}}
+    {{else}}
+      <h1>you dont have a thought </h1>
+    {{/if}}
+
   </div>
   <button id="btn-create"> <a href="/thoughts"> Create + </a></button>
 </div>

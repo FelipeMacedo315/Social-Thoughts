@@ -4,7 +4,7 @@ const routesLogin = express.Router();
 
 routesLogin.use(express.urlencoded({extended: true}));
 
-routesLogin.get("/Login", loginGet);
+routesLogin.get("/", loginGet);
 routesLogin.post("/LoginPost", loginPost);
 
 module.exports = routesLogin;
