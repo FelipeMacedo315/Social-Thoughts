@@ -13,6 +13,7 @@ const deleteThoughtRoutes = require("./src/routes/deleteThoughtRoutes");
 const thoughtsUser = require("./src/models/thoughts");
 const app = express();
 
+const port = process.env.PORT || 3000;
 app.use(
   session({
     name: "session",
@@ -56,4 +57,6 @@ app.get("/", async (req, res) => {
   res.render("dashboard", {usersData: ThoughtAllUsers});
 });
 
-app.listen(3000, () => {});
+app.listen(port, () => {
+  console.log("APLICATION IS RUN IN PORT:" + port);
+});
