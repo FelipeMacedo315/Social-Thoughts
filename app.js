@@ -60,7 +60,7 @@ app.get("/", async (req, res) => {
     const nomeOfUsuario = await Users.findOne({where: {id: item.userId}, raw: true});
     item.nome = nomeOfUsuario.nome;
   });
-  console.log(ThoughtAllUsers);
+
   res.render("home", {usersData: ThoughtAllUsers});
 });
 

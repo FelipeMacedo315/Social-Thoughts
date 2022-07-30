@@ -1,0 +1,24 @@
+@media only screen and (max-width: 425px) {
+  header {
+    justify-content: center;
+  }
+  header ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+  #all-thoughts {
+    border: solid blue;
+  }
+  .container-thoughts {
+    min-height: 50vh;
+    font-size: 1em;
+    gap: 15vh;
+  
+  }
+  .card-thoughts {
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    min-height: 25vh;
+  }
+}

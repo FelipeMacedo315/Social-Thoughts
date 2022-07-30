@@ -4,6 +4,7 @@ body {
   background-color: black;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: white;
+  min-height: 100%;
 }
 header {
   width: 100%;
@@ -11,13 +12,14 @@ header {
   color: white;
   font-size: 0.8em;
   height: 10vh;
+  display: flex;
+  justify-content:flex-start;
 }
 header ul {
+  width: 30%;
   display: flex;
+  justify-content: space-around;
   list-style: none;
-}
-header ul li {
-  margin-left: 2%;
 }
 
 footer {
