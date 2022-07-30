@@ -11,6 +11,8 @@ const dashboardRoutes = require("./src/routes/dashboardRoutes");
 const req = require("express/lib/request");
 const deleteThoughtRoutes = require("./src/routes/deleteThoughtRoutes");
 const thoughtsUser = require("./src/models/thoughts");
+const {userInfo} = require("os");
+
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -53,8 +55,13 @@ Users.sync();
 
 app.get("/", async (req, res) => {
   const ThoughtAllUsers = await thoughtsUser.findAll({raw: true});
+
+  ThoughtAllUsers.forEach(async (item) => {
+    const nomeOfUsuario = await Users.findOne({where: {id: item.userId}, raw: true});
+    item.nome = nomeOfUsuario.nome;
+  });
   console.log(ThoughtAllUsers);
-  res.render("dashboard", {usersData: ThoughtAllUsers});
+  res.render("home", {usersData: ThoughtAllUsers});
 });
 
 app.listen(port, () => {

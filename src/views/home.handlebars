@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/home.css" />
+<div id="all-thoughts">
+  <div class="container-thoughts">
+    {{#if usersData}}
+      {{#each usersData}}
+        <div class="card-thoughts">
+          <p class="users-thoughts">{{this.userThought}}</p>
+          <div class="nome-user"> <span>{{this.nome}}</span></div>
+        </div>
+      {{/each}}
+    {{else}}
+      <h1>you dont have a thought </h1>
+    {{/if}}
+
+  </div>
+  <button id="btn-create"> <a href="/thoughts"> Create + </a></button>
+</div>
