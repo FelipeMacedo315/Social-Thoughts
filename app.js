@@ -12,7 +12,6 @@ const req = require("express/lib/request");
 const deleteThoughtRoutes = require("./src/routes/deleteThoughtRoutes");
 const thoughtsUser = require("./src/models/thoughts");
 const {userInfo} = require("os");
-
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -60,8 +59,7 @@ app.get("/", async (req, res) => {
     const nomeOfUsuario = await Users.findOne({where: {id: item.userId}, raw: true});
     item.nome = nomeOfUsuario.nome;
   });
-
-  res.render("home", {usersData: ThoughtAllUsers});
+  res.render("home", {usersData: ThoughtAllUsers, sessionId: req.session.userId});
 });
 
 app.listen(port, () => {

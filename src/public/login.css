@@ -22,10 +22,14 @@ div form input{
 }
 div form button{
   margin-top: 5%;
-  padding: 10px 15px;
-  color: white;
-  background-color: royalblue;
-  border-radius: 10px;
+  padding: 20px;
+  font-size: 1em;
+  background-color: black;
+  color:white;
+  border: solid orange;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
 }
 #login-error{
   font-size: 1em;

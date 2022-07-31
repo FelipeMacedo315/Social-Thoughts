@@ -3,14 +3,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Thoughts</title>
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="/responsive.css" />
+    <link rel="icon" type="image/ico" href="/lamp.ico" >
   </head>
   <body>
     <header>
       <ul>
-         <li><a href="/">Pensamentos</a></li>
+        <li><a href="/">Pensamentos</a></li>
         {{#if sessionId}}
           <li><a href="/dashboard/{{sessionId}}">Dashboard</a></li>
           <li><a href="/loginGet">Logout </a></li>
@@ -20,7 +21,6 @@
           <li><a href="/registered">Registrar</a></li>
         {{/if}}
 
-       
       </ul>
     </header>
     {{{body}}}
