@@ -16,15 +16,15 @@ div form{
 div form input{
   color: yellow;
   margin-top: 1%;
-  width: 40%;
+ min-width: 40%;
   font-size: 0.8em;
   background-color: black;
 }
 div form button{
-  margin-top: 2%;
+  margin-top: 5%;
   padding: 10px 15px;
   color: white;
-  background-color: green;
+  background-color: royalblue;
   border-radius: 10px;
 }
 #login-error{
